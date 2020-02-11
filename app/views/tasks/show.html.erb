@@ -1,0 +1,13 @@
+<h1><%= @task.title %></h1>
+
+<div class="alert alert-warning">
+  <%= @task.details %>
+</div>
+
+<input type="checkbox" <%= "checked" if @task.completed %>>
+<%= @task.completed ? "This task is completed" : "This task is not completed yed" %>
+
+<hr>
+
+<%= link_to "← Back to the tasks list", tasks_path, :class => 'btn btn-primary' %>
+<%= link_to "Edit the task ✎", edit_task_path(@task), :class => 'btn btn-primary' %>
